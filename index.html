@@ -22,7 +22,7 @@
       }
     </style>
   </head>
-  <body class="bg-slate-100 h-[100vh] flex flex-col gap-5 poppins">
+  <body class="bg-slate-100 flex flex-col gap-5 poppins">
     <header class="mt-7">
       <nav
         class="shadow-sm max-w-screen-2xl h-20 bg-white mx-auto rounded-xl flex px-4 justify-between"
@@ -54,7 +54,326 @@
       </nav>
     </header>
 
-    <main></main>
+    <main class="max-w-screen-2xl w-full mx-auto h-5/6 space-x-4 flex">
+      <section
+        class="flex flex-col bg-white w-[80%] rounded-xl py-3 px-4 gap-y-12"
+      >
+        <!-- |dashboard container| -->
+        <div class="h-26 flex justify-between gap-6">
+          <!-- !!Assigned Task Container -->
+
+          <div class="flex items-center gap-5 px-5 bg-custom rounded-lg w-1/5 bg-gray-100">
+            <!-- !assigned tick container -->
+            <div class="bg-white p-2 rounded-full">
+              <input
+                type="checkbox"
+                checked="checked"
+                class="checkbox checkbox-md !bg-[#3752FD] text-white"
+              />
+            </div>
+
+            <!-- task assigned Text Container -->
+            <div>
+              <p class="font-medium text-base text-[rgba(0,48,60,0.8)]">
+                Task Assigned
+              </p>
+              <p class="font-bold text-2xl" id="taskNumber">5</p>
+            </div>
+          </div>
+
+          <!-- discover container -->
+          <div
+            class="bg-gradient-to-r from-[#3751fdd5] via-[rgba(108,127,250,0.53)] to-[rgba(166,175,235,0.34)] rounded-lg w-3/5 flex justify-center gap-10 cursor-pointer items-center"
+            id="discover"
+          >
+            <!-- Image -->
+            <div>
+              <img class="w-14" src="assets/board.png" alt="" />
+            </div>
+            <!-- text -->
+            <div>
+              <p class="text-white text-lg font-medium hover:text-amber-100">
+                Discover Something <br />
+                New Today!
+              </p>
+            </div>
+          </div>
+
+          <!-- date container -->
+          <div
+            class="w-1/5 bg-custom rounded-lg flex justify-around items-center px-5 bg-gray-100""
+          >
+            <!-- logo section -->
+            <div class="bg-white p-2 rounded-full">
+              <img src="assets/calender.png" alt="" />
+            </div>
+            <!--dynamic date section -->
+
+            <div class="flex flex-col gap-1">
+              <!-- day name container -->
+              <div>
+                <p id="dayName" class="">WED ,</p>
+              </div>
+              <!-- date container -->
+              <div>
+                <p id="date" class="font-bold">25 July 2025</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--|task div| -->
+        <div class="gap-7 h-full grid grid-cols-3">
+          <!-- card 1 -->
+          <div
+            class="p-3 shadow-md rounded-lg bg-custom flex flex-col gap-5 justify-between"
+          >
+            <!-- Text Container -->
+            <div class="flex flex-col items-start gap-4">
+              <h6
+                class="text-base text-[#00303C] bg-white rounded-lg py-1 px-3"
+              >
+                ShopEase
+              </h6>
+              <h1 class="text-2xl font-medium" id="t1">
+                Fix Mobile Button Issue
+              </h1>
+              <p
+                class="px-3 truncate w-full bg-white rounded-lg py-8 text-base text-gray-400"
+              >
+                Debug using Chrome <br />
+                DevTools, check for overlapping elements, and ensure onClick
+                works properly and ensure onClick works properly
+              </p>
+            </div>
+
+            <!-- Deadline and Button Container -->
+            <div class="flex gap-16 justify-between items-center">
+              <!-- deadline div -->
+              <div>
+                <small class="text-[#00303C]">Deadline</small>
+                <p class="font-medium text-base">21 March 2025</p>
+              </div>
+              <!-- Button Div -->
+              <div>
+                <button
+                  id="cb1"
+                  class="btn btn-primary border-none bg-[#3752FD] text-sm px-6"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 2 -->
+          <div
+            class="p-3 shadow-md rounded-lg bg-custom flex flex-col gap-5 justify-between"
+          >
+            <!-- Text Container -->
+            <div class="flex flex-col items-start gap-4">
+              <h6
+                class="text-base text-[#00303C] bg-white rounded-lg py-1 px-3"
+              >
+                CloudSync
+              </h6>
+              <h1 class="text-2xl font-medium" id="t2">Add Dark Mode</h1>
+              <p
+                class="px-3 truncate w-full bg-white rounded-lg py-8 text-base text-gray-400"
+              >
+                Dark mode reduces eye strain <br />
+                in low-light conditions, improves battery life on OLED screens,
+                and offers a sleek, modern look for apps and websites
+              </p>
+            </div>
+
+            <!-- Deadline and Button Container -->
+            <div class="flex gap-16 justify-between items-center">
+              <!-- deadline div -->
+              <div>
+                <small class="text-[#00303C]">Deadline</small>
+                <p class="font-medium text-base">07 March 2025</p>
+              </div>
+              <!-- Button Div -->
+              <div>
+                <button
+                  id="cb2"
+                  class="btn btn-primary border-none bg-[#3752FD] text-sm px-6"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 3 -->
+          <div
+            class="p-3 shadow-md rounded-lg bg-custom flex flex-col gap-5 justify-between"
+          >
+            <!-- Text Container -->
+            <div class="flex flex-col items-start gap-4">
+              <h6
+                class="text-base text-[#00303C] bg-white rounded-lg py-1 px-3"
+              >
+                SwiftPay
+              </h6>
+              <h1 class="text-2xl font-medium" id="t3">Optimize Home Page</h1>
+              <p
+                class="px-3 truncate w-full bg-white rounded-lg py-8 text-base text-gray-400"
+              >
+                Improving the home page <br />
+                by refining layout, enhancing speed, and ensuring mobile
+                responsiveness for a seamless user experience
+              </p>
+            </div>
+
+            <!-- Deadline and Button Container -->
+            <div class="flex gap-16 justify-between items-center">
+              <!-- deadline div -->
+              <div>
+                <small class="text-[#00303C]">Deadline</small>
+                <p class="font-medium text-base">26 March 2025</p>
+              </div>
+              <!-- Button Div -->
+              <div>
+                <button
+                  id="btn3"
+                  class="btn btn-primary border-none bg-[#3752FD] text-sm px-6"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 4 -->
+          <div
+            class="p-3 shadow-md rounded-lg bg-custom flex flex-col gap-5 justify-between"
+          >
+            <!-- Text Container -->
+            <div class="flex flex-col items-start gap-4">
+              <h6
+                class="text-base text-[#00303C] bg-white rounded-lg py-1 px-3"
+              >
+                Meta
+              </h6>
+              <h1 class="text-2xl font-medium" id="t4">
+                Add New emoji <span class="">🤲</span>
+              </h1>
+              <p
+                class="px-3 truncate w-full bg-white rounded-lg py-8 text-base text-gray-400"
+              >
+                Improving the home page <br />
+                by refining layout, enhancing speed, and ensuring mobile
+                responsiveness for a seamless user experience
+              </p>
+            </div>
+
+            <!-- Deadline and Button Container -->
+            <div class="flex gap-16 justify-between items-center">
+              <!-- deadline div -->
+              <div>
+                <small class="text-[#00303C]">Deadline</small>
+                <p class="font-medium text-base">05 May 2025</p>
+              </div>
+              <!-- Button Div -->
+              <div>
+                <button
+                  id="cb4"
+                  class="btn btn-primary border-none bg-[#3752FD] text-sm px-6"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 5 -->
+          <div
+            class="p-3 shadow-md rounded-lg bg-custom flex flex-col gap-5 justify-between"
+          >
+            <!-- Text Container -->
+            <div class="flex flex-col items-start gap-4">
+              <h6
+                class="text-base text-[#00303C] bg-white rounded-lg py-1 px-3"
+              >
+                Google LLC
+              </h6>
+              <h1 class="text-2xl font-medium" id="t5">Integrate OpenAI API</h1>
+              <p
+                class="px-3 truncate w-full bg-white rounded-lg py-8 text-base text-gray-400"
+              >
+                Integrate OpenAI API <br />
+                into your system for advanced AI-driven solutions, enabling
+                natural language processing and automation
+              </p>
+            </div>
+
+            <!-- Deadline and Button Container -->
+            <div class="flex gap-16 justify-between items-center">
+              <!-- deadline div -->
+              <div>
+                <small class="text-[#00303C]">Deadline</small>
+                <p class="font-medium text-base">21 April 2025</p>
+              </div>
+              <!-- Button Div -->
+              <div>
+                <button
+                  id="cb5"
+                  class="btn btn-primary border-none bg-[#3752FD] text-sm px-6"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 6 -->
+          <div
+            class="p-3 shadow-md rounded-lg bg-custom flex flex-col gap-5 justify-between"
+          >
+            <!-- Text Container -->
+            <div class="flex flex-col items-start gap-4">
+              <h6
+                class="text-base text-[#00303C] bg-white rounded-lg py-1 px-3"
+              >
+                Glassdoor
+              </h6>
+              <h1 class="text-2xl font-medium" id="t6">
+                Improve Job Searching
+              </h1>
+              <p
+                class="px-3 truncate w-full bg-white rounded-lg py-8 text-base text-gray-400"
+              >
+                Improve job searching <br />
+                by utilizing AI-driven platforms, refining your resume, and
+                leveraging networking opportunities for better chances .
+              </p>
+            </div>
+
+            <!-- Deadline and Button Container -->
+            <div class="flex gap-16 justify-between items-center">
+              <!-- deadline div -->
+              <div>
+                <small class="text-[#00303C]">Deadline</small>
+                <p class="font-medium text-base">30 April 2025</p>
+              </div>
+              <!-- Button Div -->
+              <div>
+                <button
+                  id="cb6"
+                  class="btn btn-primary border-none bg-[#3752FD] text-sm px-6"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+    </main>
 
     <script src="scripts/dev.js"></script>
   </body>
