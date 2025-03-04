@@ -6,12 +6,10 @@ document
     event.stopPropagation();
   });
 
-  document
+document
   .getElementById("btmain")
   .addEventListener("click", function name(event) {
+    console.log('yo');
     window.location.href = "./index.html";
-    // window.history.back();
-    // alert("hi");
     event.stopPropagation();
   });
-  
