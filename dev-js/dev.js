@@ -55,7 +55,11 @@ document
 
       alert("Board Updated Successfully");
     }
+
+    document
+      .getElementById("clear")
+      .addEventListener("click", function (event) {
+        event.preventDefault();
+        document.getElementById("notification_container").innerHTML = "";
+      });
   });
-
-
-

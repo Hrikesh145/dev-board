@@ -13,3 +13,4 @@ document
     window.location.href = "./index.html";
     event.stopPropagation();
   });
+
