@@ -24,8 +24,6 @@ document
 
       const timeList = hours + ":" + minutes + ":" + seconds + " " + shift;
 
-      //send notification section
-
       const notificationContainer = document.getElementById(
         "notification_container"
       );
@@ -51,7 +49,7 @@ document
       );
       notificationContainer.appendChild(newP);
 
-      //button disable section
+      event.target.disabled = true;
 
       alert("Board Updated Successfully");
     }
@@ -62,4 +60,40 @@ document
         event.preventDefault();
         document.getElementById("notification_container").innerHTML = "";
       });
+
+    const taskNumber = document.getElementById("taskNumber").innerText;
+
+    const taskNumberRemain = parseInt(taskNumber);
+    let remain = taskNumberRemain - 1;
+    document.getElementById("taskNumber").innerText = parseInt(remain);
+
+    const taskDone = document.getElementById("taskDone").innerText;
+    const done = parseInt(taskDone) + 1;
+    document.getElementById("taskDone").innerText = done;
+
+    if (remain === 0) {
+      alert("Congratulations you have completed all the tasks.");
+    }
+    event.stopPropagation();
+  });
+
+// colorchange
+
+document
+  .getElementById("btnColorChange")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    const body = document.getElementById("body");
+    let randomColor = Math.random().toString(16);
+    randomColor = randomColor.slice(2, 8);
+
+    if (randomColor.length < 6) {
+      while (randomColor.length !== 6) {
+        randomColor = randomColor + "0";
+      }
+    }
+    randomColor = "#" + randomColor;
+
+    body.classList.remove("bg-slate-100");
+    body.style.backgroundColor = randomColor;
   });

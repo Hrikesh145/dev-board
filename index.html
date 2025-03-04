@@ -22,7 +22,7 @@
       }
     </style>
   </head>
-  <body class="bg-slate-100 flex flex-col gap-5 poppins">
+  <body id="body" class="bg-slate-100 flex flex-col gap-5 poppins">
     <header class="mt-7">
       <nav
         class="shadow-sm max-w-screen-2xl h-20 bg-white mx-auto rounded-xl flex px-4 justify-between"
@@ -44,7 +44,7 @@
               checked="checked"
               class="checkbox checkbox-md !bg-[#3752FD] text-white"
             />
-            <p class="font-bold text-2xl">23</p>
+            <p id="taskDone" class="font-bold text-2xl">23</p>
           </div>
 
           <div id="btnColorChange" class="bg-[#F4F7FF] rounded-full p-3">
@@ -345,7 +345,10 @@
             </div>
           </div>
 
-          <button id="clear" class="btn btn-primary border-none bg-[#3752FD] text-sm px-6">
+          <button
+            id="clear"
+            class="btn btn-primary border-none bg-[#3752FD] text-sm px-6"
+          >
             Clear History
           </button>
         </div>
